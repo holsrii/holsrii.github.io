@@ -7,18 +7,43 @@
 	
 	</head>
 	
-	<center><h1>You are a squirrel.</h1>
+	<style>
+		#footer {
+			position: absolute;
+			bottom: 0;
+		}
+		#colognet {
+			position: absolute;
+			bottom: 450;
+			left: 0;
+		}
+		#cologne {
+			position: absolute;
+			bottom: 50;
+			left: 0;
+		}
+	</style>
 	
-	<body>
+	<center>
+		<h1>You are a squirrel.</h1>
+	</center>
+		
+	<body width="800" height="600">
 		You have <a id="acorns"></a> acorns.
+	
+		<button type="button" onclick="DontClick()" style="color:red">don't click me</button>
+	
+		<div style="display:none" id="beetleArrival">Your acorns are starting to attract the beetles...</div>
+	
+		<img style="display:none" id="lennon" src="assets\images\lennon.gif"></img>
+	
+		<button type="button" onclick="buyBlue()" style="color:#84b3ff">Upgrade the background (Cost: 500ac)</button>
+		
+		<div style="display:none" id="colognet">Hello traveler, welcome to my shop.</div>
+		<img style="display:none" id="cologne" src="assets\images\cologne.gif" width="270" height="360"></img>
+		
 	</body>
 	
-	<button type="button" onclick="DontClick()" style="color:red">don't click me</button>
-	
-	<div style="display:none" id="beetleArrival">Your acorns are starting to attract the beetles...</div>
-	
-	<img style="display:none" id="lennon" src="assets\images\lennon.gif"></img>
-	
-	<button type="button" onclick="buyBlue()" style="color:#84b3ff">Upgrade the background (Cost: 500ac)</button>
+	<footer id="footer" onclick="enableSecret()" style="color:white">you're not supposed to find this!</footer>
 	
 </html>

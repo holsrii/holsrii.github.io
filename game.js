@@ -3,6 +3,7 @@
 let acorns = 0;
 let dontclick = 0;
 let boughtBlue = false;
+let secretEnabled = false;
 // why doesn't this work without settimeout -_-
 
 setTimeout(function(){ document.getElementById("acorns").innerHTML = acorns; }, 0);
@@ -35,5 +36,14 @@ function buyBlue(){
 		alert("You cannot afford this, fool");
 	}else{
 		alert("You have already bought this upgrade, fool");
+	}
+}
+
+function enableSecret(){
+	if(secretEnabled == false){
+		alert("You found the secret!");
+		document.getElementById("cologne").style.display = "";
+		document.getElementById("colognet").style.display = "";
+		secretEnabled = true;
 	}
 }
