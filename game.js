@@ -10,7 +10,7 @@ setTimeout(function(){ document.getElementById("acorns").innerHTML = acorns; }, 
 setInterval(function(){
 		acorns++;
 		document.getElementById("acorns").innerHTML = acorns;
-		if (acorns >= 100){
+		if (acorns >= 150){
 			document.getElementById("beetleArrival").style.display = "";
 		}
 		if (acorns >= 250){
@@ -22,7 +22,7 @@ function DontClick(){
 	acorns = acorns + 10;
 	document.getElementById("acorns").innerHTML = acorns;
 	dontclick++;
-	if (dontclick == 10) {
+	if (dontclick == 5) {
 		alert("Did you even read the button?!?!");
 	}
 }
@@ -31,6 +31,7 @@ function buyBlue(){
 	if(boughtBlue == false && acorns >= 500){
 		acorns = acorns - 500;
 		document.body.style.backgroundColor = "#84b3ff";
+		document.getElementById("footer").style = "color:#84b3ff";
 		boughtBlue = true;
 	}else if(acorns <=500){
 		alert("You cannot afford this, fool");
